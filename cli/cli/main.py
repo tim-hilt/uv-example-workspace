@@ -1,7 +1,6 @@
 import argparse
 
-from core import hello  # , fibonacci
-from native.native import nth_fibonacci_recursive as fibonacci
+from core import hello, fibonacci
 
 
 def parse_args():

@@ -51,8 +51,8 @@ pub const Fibonacci = py.class(struct {
     }
 
     // Get an iterator over the first `self.first_n` Fibonacci numbers.
-    pub fn __iter__(self: *const Self) !*FibonacciIterator.definition {
-        return try py.init(root, FibonacciIterator.definition, .{ .i = 0, .ith = 0, .next = 1, .stop = self.first_n });
+    pub fn __iter__(self: *const Self) !*FibonacciIterator {
+        return try py.init(FibonacciIterator, .{ .i = 0, .ith = 0, .next = 1, .stop = self.first_n });
     }
 });
 
